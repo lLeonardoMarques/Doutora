@@ -1,0 +1,6 @@
+{
+  "name": "Dra. Lígia Magalhães — Odontologia Especializada",
+  "description": "Site institucional one-page moderno e acolhedor para o consultório odontológico da Dra. Lígia Magalhães, com foco em cuidado humanizado e agendamento de consultas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
