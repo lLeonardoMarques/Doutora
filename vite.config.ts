@@ -6,7 +6,8 @@ import { defineConfig } from 'vite';
 export default defineConfig(({ command }) => {
   return {
     plugins: [react(), tailwindcss()],
-    base: command === 'build' ? '/Dra.-L-gia-Magalh-es/' : '/',
+    // ⚠️ MUDOU AQUI! Agora aponta para o NOVO repositório
+    base: command === 'build' ? '/Doutora/' : '/',
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
