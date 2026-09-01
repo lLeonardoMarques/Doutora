@@ -14,7 +14,7 @@ export const Hero: React.FC<HeroProps> = ({ onAgendarClick, onConhecerTratamento
       id="inicio"
       className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-b from-teal-50/40 via-white to-slate-50/50"
     >
-      {/* Elementos sutis de fundo (calma e frescor dental) */}
+      {/* Elementos sutis de fundo */}
       <div className="absolute top-12 right-10 w-96 h-96 bg-teal-100/30 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-10 left-10 w-80 h-80 bg-sky-100/30 rounded-full blur-3xl pointer-events-none -z-10" />
 
@@ -29,7 +29,7 @@ export const Hero: React.FC<HeroProps> = ({ onAgendarClick, onConhecerTratamento
               <span>Odontologia Especializada & Humanizada</span>
             </div>
 
-            {/* Título Principal / Headline */}
+            {/* Título Principal */}
             <div className="space-y-3">
               <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 leading-[1.18]">
                 {DADOS_CLINICA.headlineHero}
@@ -54,7 +54,7 @@ export const Hero: React.FC<HeroProps> = ({ onAgendarClick, onConhecerTratamento
               </div>
             </div>
 
-            {/* Ações / Botões de Conversão */}
+            {/* Ações / Botões */}
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
               <button
                 id="hero-btn-agendar"
@@ -75,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({ onAgendarClick, onConhecerTratamento
               </button>
             </div>
 
-            {/* 3 pilares de tranquilidade no primeiro contato */}
+            {/* 3 pilares */}
             <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-slate-200/60 text-xs sm:text-sm text-slate-600">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
@@ -92,18 +92,18 @@ export const Hero: React.FC<HeroProps> = ({ onAgendarClick, onConhecerTratamento
             </div>
           </div>
 
-          {/* Coluna Direita: Foto Principal da Doutora */}
+          {/* Coluna Direita: Foto Principal */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md">
-              {/* Moldura elegante com camadas suaves */}
               <div className="relative rounded-3xl bg-white p-3 shadow-xl shadow-teal-900/5 border border-slate-100">
                 <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-gradient-to-tr from-teal-100/60 via-slate-100 to-sky-50 flex flex-col justify-between">
                   
-                  {/* Imagem real ou placeholder oficial com indicação precisa */}
+                  {/* ⚠️ CORREÇÃO PRINCIPAL: IMAGEM COM FALLBACK E BASE */}
                   <img
                     id="foto-hero-doutora"
                     src={IMAGENS.doutora.hero}
                     onError={(e) => {
+                      // Fallback se a imagem não carregar
                       e.currentTarget.src = IMAGENS.doutora.heroFallback;
                     }}
                     alt="Dra. Lígia Magalhães — Odontologia Especializada"
@@ -112,7 +112,7 @@ export const Hero: React.FC<HeroProps> = ({ onAgendarClick, onConhecerTratamento
                     loading="eager"
                   />
 
-                  {/* Badge sutil sobreposto na foto */}
+                  {/* Badge sobreposto */}
                   <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-white/95 backdrop-blur-md border border-white/80 shadow-md">
                     <div className="flex items-center justify-between">
                       <div>
@@ -128,28 +128,8 @@ export const Hero: React.FC<HeroProps> = ({ onAgendarClick, onConhecerTratamento
                       </span>
                     </div>
                   </div>
-
-                  {/* Tag indicativa de mídia do Google Maps */}
-                  <div className="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-slate-900/70 text-white text-[11px] font-mono backdrop-blur-xs flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-teal-400" />
-                    <span>foto-doutora-hero.jpg</span>
-                  </div>
                 </div>
               </div>
-
-              {/* Selo flutuante de acolhimento */}
-              {/* <div className="absolute -bottom-5 -left-4 sm:-left-6 bg-white p-3 sm:p-4 rounded-2xl shadow-lg border border-slate-100 max-w-[200px] hidden sm:block">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center shrink-0">
-                    <HeartHandshake className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-slate-800 leading-tight">Cuidado Individual</p>
-                    <p className="text-[11px] text-slate-500">Sem pressa, com escuta ativa</p>
-                  </div>
-                </div>
-              </div> */}
-
             </div>
           </div>
 
