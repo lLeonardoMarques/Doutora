@@ -3,10 +3,10 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig } from 'vite';
 
-export default defineConfig(() => {
+export default defineConfig(({ command }) => {
   return {
     plugins: [react(), tailwindcss()],
-    base: '/Dra.-L-gia-Magalh-es/', // Nome do seu repositório
+    base: command === 'build' ? '/Dra.-L-gia-Magalh-es/' : '/',
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
